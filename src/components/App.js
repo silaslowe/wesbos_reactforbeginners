@@ -48,7 +48,8 @@ class App extends React.Component {
             ))}
           </ul>
         </div>
-        <Order />
+        {/* You can spread state into a component so {...this.state} === fishes={this.state.fishes} order={this.state.order} */}
+        <Order fishes={this.state.fishes} order={this.state.order} />
         <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes} />
       </div>
     );
